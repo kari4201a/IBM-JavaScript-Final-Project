@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+
+    <section id="executives">
+      <h2>Our Executives</h2>
+      <div class="executive">
+        <h3>Jane Doe</h3>
+        <p>Chief Executive Officer</p>
+        <button onclick="contactExecutive('jane.doe@example.com')">Contact</button>
+      </div>
+      <div class="executive">
+        <h3>John Smith</h3>
+        <p>Chief Financial Officer</p>
+        <button onclick="contactExecutive('john.smith@example.com')">Contact</button>
+      </div>
+      <div class="executive">
+        <h3>Alice Johnson</h3>
+        <p>Chief Technology Officer</p>
+        <button onclick="contactExecutive('alice.johnson@example.com')">Contact</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function contactExecutive(email) {
+      window.location.href = `mailto:${email}`;
+    }
+  </script>
+</body>
+</html>

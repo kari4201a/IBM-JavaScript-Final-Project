@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/travelbackground.jpeg');
+  background-size: cover; 
+  background-position: center; 
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; /* Align items vertically */
+}
+
+.header-left {
+  flex: 1; /* Take up remaining space */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+.search-container {
+  margin-right: 20px; /* Adjust as needed */
+}
+
+#countryImages {
+  display: flex;
+  flex-direction: column; /* Ensure images are displayed one under the other */
+  gap: 10px;
+}
+
+#countryImages img {
+  width: 75%; /* Ensure images take full width of their container */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer;
+  display: block;
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for better readability */
+  margin: 20px;
+  border-radius: 10px;
+}
