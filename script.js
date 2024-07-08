@@ -1,4 +1,4 @@
-// Define the data for country images
+
 const imagesData = [
   { 
     country: 'Canada', 
@@ -52,7 +52,7 @@ const imagesData = [
   }
 ];
 
-// Function to fetch current time from an API
+
 async function fetchCurrentTime(city) {
   try {
     const response = await fetch(`http://worldtimeapi.org/api/timezone/${city}`);
@@ -61,7 +61,7 @@ async function fetchCurrentTime(city) {
     }
     const data = await response.json();
     
-    // Debugging output
+    
     console.log(`Fetched time data for ${city}:`, data);
 
     return data.datetime; // Returns datetime string in ISO format
@@ -71,30 +71,30 @@ async function fetchCurrentTime(city) {
   }
 }
 
-// Function to format datetime string to "hh:mm:ss AM/PM"
+
 function formatTime(datetime) {
   const date = new Date(datetime);
   return date.toLocaleTimeString('en-US', { hour12: true, hour: 'numeric', minute: '2-digit', second: '2-digit' });
 }
 
-// Function to search and display images based on user input
+
 async function searchCountry() {
   const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
   const countryImagesDiv = document.getElementById('countryImages');
   countryImagesDiv.innerHTML = '';
 
-  // Filter imagesData for the searched country or keywords
+  
   const filteredImages = imagesData.filter(image => {
     return image.country.toLowerCase() === searchTerm ||
            (image.keywords && image.keywords.includes(searchTerm));
   });
 
-  // Display images and current local time for the searched country or keywords
+  
   for (const image of filteredImages) {
     const containerDiv = document.createElement('div');
     containerDiv.className = 'country-container';
 
-    // Fetch current local time and display above the images
+    
     const time = await fetchCurrentTime(image.timezone);
     if (time) {
       const timeFormatted = formatTime(time);
@@ -131,7 +131,7 @@ async function searchCountry() {
   }
 }
 
-// Function to display a single image on click
+
 function displayImage(imageUrl) {
   const countryImagesDiv = document.getElementById('countryImages');
   countryImagesDiv.innerHTML = '';
@@ -142,7 +142,7 @@ function displayImage(imageUrl) {
   countryImagesDiv.appendChild(imgElement);
 }
 
-// Function to clear displayed images
+
 function clearImages() {
   document.getElementById('countryImages').innerHTML = '';
 }
