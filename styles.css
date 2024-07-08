@@ -13,11 +13,11 @@ header {
   padding: 10px;
   display: flex;
   justify-content: space-between; 
-  align-items: center; /* Align items vertically */
+  align-items: center;
 }
 
 .header-left {
-  flex: 1; /* Take up remaining space */
+  flex: 1;
 }
 
 .header-right {
@@ -47,18 +47,18 @@ nav ul li a:hover {
 }
 
 .search-container {
-  margin-right: 20px; /* Adjust as needed */
+  margin-right: 20px;
 }
 
 #countryImages {
   display: flex;
-  flex-direction: column; /* Ensure images are displayed one under the other */
+  flex-direction: column;
   gap: 10px;
 }
 
 #countryImages img {
-  width: 75%; /* Ensure images take full width of their container */
-  height: auto; /* Maintain aspect ratio */
+  width: 75%; 
+  height: auto; 
   cursor: pointer;
   display: block;
   padding: 20px;
@@ -66,7 +66,7 @@ nav ul li a:hover {
 
 main {
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* Light background for better readability */
+  background-color: rgba(255, 255, 255, 0.8);
   margin: 20px;
   border-radius: 10px;
 }
